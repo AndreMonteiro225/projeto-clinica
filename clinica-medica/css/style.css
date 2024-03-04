@@ -1,0 +1,242 @@
+
+/* estilos globais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.limita-secao {
+    max-width: 1024px;
+}
+/* FIM ESTILOS GLOBAIS */
+
+
+/* CABEÇALHO */
+
+.topo {
+    position: relative;
+    background-color: aqua;
+    display: flex;
+    margin: 0 auto;
+    max-width: auto;
+    padding-left: 15vw;
+    gap: 50%;
+}
+
+.topo img {
+    margin-left: 2vw;
+}
+
+.topo nav{  
+    display: flex;
+    gap: 1vw;
+    justify-content: right;
+    align-items: center;
+    margin-right: 2vw;
+
+}
+
+.topo a {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 22px;
+}
+/* FIM CABEÇALHO */
+
+/* BANNER */
+
+.secao-banner {
+    margin: 0 auto;
+    background-image: url("../assets/recepcao.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1vh;
+}
+
+.secao-banner h2{
+    font-weight: normal;
+    font-size: 45px;
+    color: white;
+    margin-left: 4vw;
+}
+/* FIM BANNER */
+
+/* SEÇÃO SOBRE */
+
+.secao-sobre {
+    margin: 2vh auto;
+}
+
+.subtitulo-descricao {
+    margin: 3vh auto;
+}
+
+.subtitulo-descricao h3{
+    text-align: center;
+    font-size: 25px;
+    margin: 3vh auto;
+}
+
+.subtitulo-descricao p{
+    margin-left: 6vw;
+    max-width: 800px;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+.secao-sobre {
+    margin: 15vh auto;
+}
+
+.secao-sobre ul{
+    position: relative;
+    margin-left: 27vw;
+}
+
+.secao-sobre h3{
+    text-align: center;
+    margin: 40px;
+    font-size: 25px;
+}
+
+.secao-sobre ul::before {
+    content: "";
+    position: absolute;
+    left: -23vw;
+    bottom: -4vh;
+    z-index: -1;
+    background-image: url("assets/medico.jpg");
+    background-size: cover;
+    width: 20vw;
+    height: 30vh;
+}
+/* FIM SEÇÃO SOBRE */
+
+/* CARDS ESPECIALIDADES */
+
+.cards {
+    display: flex;
+    margin: 5vh auto;
+    gap: 2vw;
+}
+
+.cards img {
+    width: 100%;
+}
+
+figure {
+    box-shadow: 2px 2px 20px black;
+    padding-bottom: 10px;
+    width: calc(100% / 3 - 40px);
+    flex-wrap: wrap;
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+
+/* FIM CARDS ESPECIALIDADES */
+
+/* CONTATO */
+
+.contato {
+    margin: 10vh auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.botao-horario {
+    text-align: center;
+    margin: 5vh 0;
+}
+
+.botao-horario a:hover {
+    color: black;
+}
+
+.botao-horario a{
+    text-decoration: none;
+    padding: 20px;
+    background-color: #02c8d5;
+    color: white;
+    font-weight: bold;
+}
+
+.contato-iframe {
+    display: flex;
+    margin: 5vh auto;
+}
+/* FIM CONTATO */
+
+/* RODAPÉ */
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 0 auto;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+    line-height: 30px;
+    text-align: center;
+}
+
+.rodape img {
+    width: 150px;
+}
+
+
+/* FIM RODAPÉ */
+
+@media (min-width: 1025) {
+    .secao-banner{height: 500px;}
+
+}
+
+@media (max-width: 1024px) {
+    .secao-banner {height: 400px;}
+
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    ul::before{display: none;}
+    .secao-banner{height: 300px;}
+    .secao-banner h2{font-size: 35px;}
+    .topo img {width: 150px;}
+    .topo {display: flex; flex-wrap: wrap;}
+    .cards {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    figure{width: calc(100%/2 - 40px);}
+    
+}
+
+
+@media (max-width: 425px) {
+    ul::before{display: none;}
+    .secao-banner {height: 200px;}
+    .secao-banner h2{font-size: 26px;}
+    .topo nav {margin-right: 50px; gap:20px;}
+    .topo {display: block;}
+    .topo img {width: 150px; margin-left: 60px;}
+    .cards {display: flex;flex-wrap: wrap;justify-content: center;}
+    figure {width: 100%;}
+}

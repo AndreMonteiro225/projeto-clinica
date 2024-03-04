@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.limita-secao {
+    max-width: 1024px;
+}
+
+/* CABEÇALHO */
+.topo {
+    background-color: aqua;
+    display: flex;
+    padding: 15px;
+}
+
+.topo nav {
+margin: 4.5vh 0 0 55vw;
+display: flex;
+}
+
+.topo nav a{  
+    padding: 0 8px 0 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    justify-content: center;
+}
+
+/* FIM CABEÇALHO */
+
+/* LINKS NAVEGAÇÃO */
+section nav {
+    margin: 3vh auto;
+    text-align: center;
+}
+
+section nav a{
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: black;
+}
+
+
+section nav a:hover {
+    color: blue;
+}
+/* FIM LINKS NAVEGAÇÃO */
+section h2{
+    text-align: center;
+    margin: 3vh auto;
+}
+
+/* TABELAS */
+
+
+.box-especialidade {
+    display: flex;
+    margin: 5vh auto 5vh auto;
+    max-width: 1024px;
+    justify-content:center ;
+    height: 200px;
+    width: 800px;
+}
+
+.box-especialidade img {
+    height:100%;
+}
+
+.box-subtitulo { /*especialidade subtitulo*/
+    text-align: center;
+    margin: 10vh auto 0 auto;
+    line-height: 45px;
+    max-width: 1024px;
+    text-wrap: wrap;
+    
+}
+
+.tabela-especialidade {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0px auto;
+
+    
+}
+
+.tabela-especialidade img {
+    height: 100%;
+    width: 30%;
+
+
+}
+
+.tabela-especialidade th,td {
+    padding: 2vh 6vw 2vh 6vw;
+    text-wrap: nowrap;
+
+}
+
+.tabela-especialidade th {
+    background-color: rgba(2,200,209,255);
+}
+
+.tabela-especialidade tr:nth-of-type(even) {
+    background-color: rgba(205,205,205,255);
+}
+
+
+/* FIM TABELAS */
+
+/* RODAPE */
+
+.rodape img{
+    width: 10vw;
+}
+
+.rodape {
+    background-color: #0c6e71;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:10px;
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 20vh;
+}
+
+/* FIM RODAPE */
+
+@media (min-width:769px) {
+    .tabela-especialidade {flex:1}
+}  
+
+@media (min-width: 426px) and (max-width: 768px) {
+.topo {width: 100%;}
+.topo nav {margin: 3vh 2vw 0 10vw; flex:1 1}
+.box-especialidade img{display: none;}
+.box-especialidade {width: 100%}
+}
+
+@media (max-width: 425px) {
+    .topo {display: block;}
+    .topo nav{margin:0}
+    .topo img {margin-left: 70px;}
+    .box-especialidade {flex:1 1 0;
+        justify-content: center; 
+        width: 100%;
+        margin-bottom: 10vh;}
+    .box-especialidade img{display: none;}
+    .box-especialidade td,th { text-wrap: wrap;}
+    .rodape img {width: 150px;}
+}
