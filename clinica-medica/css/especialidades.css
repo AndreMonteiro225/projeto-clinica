@@ -43,12 +43,22 @@ section nav a{
     font-size: 20px;
     text-decoration: underline;
     color: black;
+    background-color: aqua;
+    text-decoration: none;
+    border: black solid 2px;
+    margin: 0 10px 0 10px;
+    border-radius: 50px;
+
 }
 
 
 section nav a:hover {
-    color: blue;
+    color: black;
+    transition: all 1s;
+    background-color: gold;
+    border-radius: 1px;
 }
+
 /* FIM LINKS NAVEGAÇÃO */
 section h2{
     text-align: center;
@@ -76,8 +86,7 @@ section h2{
     margin: 10vh auto 0 auto;
     line-height: 45px;
     max-width: 1024px;
-    text-wrap: wrap;
-    
+    white-space: wrap;    
 }
 
 .tabela-especialidade {
@@ -156,6 +165,6 @@ section h2{
         width: 100%;
         margin-bottom: 10vh;}
     .box-especialidade img{display: none;}
-    .box-especialidade td,th { text-wrap: wrap;}
+    .box-especialidade td,th { white-space: wrap;}
     .rodape img {width: 150px;}
 }
